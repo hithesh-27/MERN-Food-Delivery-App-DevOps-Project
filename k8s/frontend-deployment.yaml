@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: hitheshgowda10docker/frontend:latest
+        image: hitheshgowda10docker/tomato-frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5173
