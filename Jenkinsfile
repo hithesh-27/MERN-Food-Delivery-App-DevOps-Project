@@ -42,7 +42,13 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
-                sh 'docker compose build'
+                sh '''
+whoami
+which docker
+docker --version
+docker compose version
+docker compose build
+'''
             }
         }
 
