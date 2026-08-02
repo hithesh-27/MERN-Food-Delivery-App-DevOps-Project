@@ -26,31 +26,36 @@ const PlaceOrder = () => {
 
   const placeOrder = async (event) => {
      event.preventDefault();
-     let orderItems = [];
-     food_list.map((item)=>{
-      if (cartItems[item._id] > 0) {
-             let itemInfo = item;
-             itemInfo["quantity"] = cartItems[item._id]
-             orderItems.push(itemInfo);
-      }
-     })
-     let orderData = {
-      address:data,
-      items:orderItems,
-      amount:getTotalCartAmount()+2,
-
+     if (!token) {
+       alert("Please login before placing an order.");
+       return;
      }
 
-    let response = await axios.post(url+"/api/order/place",orderData,{headers:{token}})
-    if (response.data.success){
-      const {session_url} = response.data;
-      window.location.replace(session_url);
-    }
-     else{
-      // show message returned by server if available
-      alert(response.data.message || "Error");
+     const orderItems = food_list.reduce((items, item) => {
+       if ((cartItems?.[item._id] ?? 0) > 0) {
+         return [...items, { ...item, quantity: cartItems[item._id] }];
+       }
+       return items;
+     }, []);
+
+     const orderData = {
+      address: data,
+      items: orderItems,
+      amount: getTotalCartAmount() + 2,
+     };
+
+     try {
+       const response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
+       if (response.data?.success) {
+         const { session_url } = response.data;
+         window.location.replace(session_url);
+       } else {
+         alert(response.data?.message || "Unable to place order.");
+       }
+     } catch (error) {
+       console.error("placeOrder error", error);
+       alert(error.response?.data?.message || error.message || "Unable to place order.");
      }
-   
   }
   
   return (

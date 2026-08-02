@@ -1,3 +1,2 @@
-streamlit>=1.56
 requests
 python-dotenv

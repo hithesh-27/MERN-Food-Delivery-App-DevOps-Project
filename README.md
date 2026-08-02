@@ -1,13 +1,8 @@
 # Food-Delivery-App
 
-## Streamlit Deployment
+## Local Run
 
-This repository includes a Streamlit wrapper for the existing backend API.
-
-### Requirements
-
-- Python 3.9+
-- `streamlit`, `requests`, `python-dotenv`
+This repository includes a backend API and a Vite-based React frontend.
 
 ### Run locally
 
@@ -16,17 +11,17 @@ This repository includes a Streamlit wrapper for the existing backend API.
    - `npm install`
    - `npm run server`
 
-2. Run the Streamlit app:
-   - from the repository root: `pip install -r requirements.txt`
-   - `streamlit run streamlit_app.py`
+2. Start the React frontend:
+   - `cd frontend`
+   - `npm install`
+   - `npm run dev`
 
-3. Open the Streamlit page in your browser.
+3. Open the frontend app in your browser.
 
 ### Notes
 
-- The Streamlit app defaults to `http://localhost:4000` for the backend.
-- To use a different backend URL, set the environment variable `BACKEND_URL` or provide `backend_url` in Streamlit secrets.
-- The app supports login/register, menu browsing, cart management, and order placement.
+- The frontend uses `VITE_BACKEND_URL` at build time and defaults to `https://food-del-backend-2-tho7.onrender.com`.
+- For local development, set `VITE_BACKEND_URL=http://localhost:4000` before building or running the frontend.
 
 ## Full Deployment
 
@@ -57,12 +52,3 @@ This repository includes a Streamlit wrapper for the existing backend API.
 
 Once your React frontend is live, set the backend `FRONTEND_URL` environment variable to the React frontend URL.
 
-### Streamlit Deployment
-
-1. Go to https://share.streamlit.io
-2. Connect GitHub repo: `hithesh-27/FOOD-DEL`
-3. Main file: `streamlit_app.py`
-4. Secrets: `backend_url = "https://food-del-backend.onrender.com"`
-5. Deploy
-
-Your app is now live!

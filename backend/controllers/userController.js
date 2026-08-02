@@ -28,8 +28,10 @@ const loginUser = async (req,res) => {
 
 }
 
+const JWT_SECRET = process.env.JWT_SECRET || "dev_jwt_secret_food_delivery";
+
 const createToken = (id) => {
-    return jwt.sign({id},process.env.JWT_SECRET)
+    return jwt.sign({id}, JWT_SECRET)
 }
 
 //register user

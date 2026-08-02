@@ -17,8 +17,4 @@ echo STRIPE_SECRET_KEY=sk_test_YOUR_STRIPE_TEST_SECRET_KEY (get from https://das
 echo MONGO_URI=mongodb+srv://hitheshgowdaar_db_user:yB7IbGmByVhakEis@cluster0.uxiwnnj.mongodb.net/food-del
 echo Then deploy and get the URL
 
-echo Step 3: Update Streamlit with backend URL
-echo In Streamlit Cloud app settings, add secret: backend_url = "YOUR_BACKEND_URL"
-echo Redeploy Streamlit
-
 echo Deployment complete!
