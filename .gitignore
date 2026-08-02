@@ -3,3 +3,8 @@ __pycache__/
 .vscode/
 
 # Single-file React bundle for Streamlit (large; regenerate with npm run build:streamlit)
+.terraform/
+**/.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfplan

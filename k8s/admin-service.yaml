@@ -7,6 +7,6 @@ spec:
   selector:
     app: admin
   ports:
-  - port: 5173
-    targetPort: 5173
+  - port: 5174
+    targetPort: 5174
   type: ClusterIP

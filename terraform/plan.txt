@@ -1,0 +1,301 @@
+[0m[1mmodule.eks.module.kms.data.aws_partition.current[0]: Reading...[0m[0m
+[0m[1mmodule.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-030a10b9a689deb82][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+[0m[1mmodule.eks.aws_security_group.node[0]: Refreshing state... [id=sg-09f8d59cb41bac53f][0m
+[0m[1mmodule.eks.data.aws_partition.current[0]: Reading...[0m[0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.eks.data.aws_caller_identity.current[0]: Reading...[0m[0m
+[0m[1mmodule.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.eks.module.kms.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks.module.kms.data.aws_caller_identity.current[0]: Reading...[0m[0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296][0m
+[0m[1mmodule.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2830595799][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].data.aws_caller_identity.current: Read complete after 0s [id=579225707106][0m
+[0m[1mmodule.eks.data.aws_caller_identity.current[0]: Read complete after 0s [id=579225707106][0m
+[0m[1mmodule.eks.data.aws_iam_session_context.current[0]: Reading...[0m[0m
+[0m[1mmodule.eks.data.aws_iam_policy_document.custom[0]: Reading...[0m[0m
+[0m[1mmodule.eks.aws_iam_role.this[0]: Refreshing state... [id=mern-eks-cluster-20260802182141937800000002][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].aws_iam_role.this[0]: Refreshing state... [id=default-eks-node-group-20260802182141941200000005][0m
+[0m[1mmodule.eks.data.aws_iam_session_context.current[0]: Read complete after 0s [id=arn:aws:iam::579225707106:user/terraform-user][0m
+[0m[1mmodule.eks.module.kms.data.aws_caller_identity.current[0]: Read complete after 0s [id=579225707106][0m
+[0m[1mmodule.eks.data.aws_iam_policy_document.custom[0]: Read complete after 0s [id=513122117][0m
+[0m[1mmodule.eks.aws_iam_policy.custom[0]: Refreshing state... [id=arn:aws:iam::579225707106:policy/mern-eks-cluster-20260802182141937200000001][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-2049511097][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-1325876564][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-1277502272][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-2914504064][0m
+[0m[1mmodule.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-2746398327][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-2115928768][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-2501451491][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-4046352329][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-4055379240][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-2252677826][0m
+[0m[1mmodule.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-1433521190][0m
+[0m[1mmodule.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=mern-eks-cluster-20260802182141937800000002-20260802182143086700000008][0m
+[0m[1mmodule.eks.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=mern-eks-cluster-20260802182141937800000002-20260802182143064300000007][0m
+[0m[1mmodule.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=mern-eks-cluster-20260802182141937800000002-20260802182143064000000006][0m
+[0m[1mmodule.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...[0m[0m
+[0m[1mmodule.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=667233960][0m
+[0m[1mmodule.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=0c78aead-dabf-4442-87fe-4a19cba514ac][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["AmazonEKS_CNI_Policy"]: Refreshing state... [id=default-eks-node-group-20260802182141941200000005-2026080218214326410000000a][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=default-eks-node-group-20260802182141941200000005-20260802182143250900000009][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=default-eks-node-group-20260802182141941200000005-2026080218214327740000000b][0m
+[0m[1mmodule.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/mern-eks][0m
+[0m[1mmodule.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::579225707106:policy/mern-eks-cluster-ClusterEncryption2026080218220364630000000c][0m
+[0m[1mmodule.eks.aws_eks_cluster.this[0]: Refreshing state... [id=mern-eks][0m
+[0m[1mmodule.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Refreshing state... [id=mern-eks:default-20260802162249271300000001][0m
+[0m[1mmodule.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=mern-eks-cluster-20260802182141937800000002-2026080218220431770000000d][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+  [33m~[0m update in-place[0m
+[32m+[0m/[31m-[0m create replacement and then destroy[0m
+ [36m<=[0m read (data resources)[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.eks.data.tls_certificate.this[0][0m will be read during apply
+  # (config refers to values not yet known)
+[0m [36m<=[0m[0m data "tls_certificate" "this" {
+      [32m+[0m[0m certificates = (known after apply)
+      [32m+[0m[0m id           = (known after apply)
+      [32m+[0m[0m url          = (known after apply)
+    }
+
+[1m  # module.eks.aws_cloudwatch_log_group.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_cloudwatch_log_group" "this" {
+      [32m+[0m[0m arn               = (known after apply)
+      [32m+[0m[0m id                = (known after apply)
+      [32m+[0m[0m log_group_class   = (known after apply)
+      [32m+[0m[0m name              = "/aws/eks/mern-eks/cluster"
+      [32m+[0m[0m name_prefix       = (known after apply)
+      [32m+[0m[0m retention_in_days = 90
+      [32m+[0m[0m skip_destroy      = false
+      [32m+[0m[0m tags              = {
+          [32m+[0m[0m "Name" = "/aws/eks/mern-eks/cluster"
+        }
+      [32m+[0m[0m tags_all          = {
+          [32m+[0m[0m "Name" = "/aws/eks/mern-eks/cluster"
+        }
+    }
+
+[1m  # module.eks.aws_eks_cluster.this[0][0m must be [1m[31mreplaced[0m
+[0m[32m+[0m/[31m-[0m[0m resource "aws_eks_cluster" "this" {
+      [33m~[0m[0m arn                           = "arn:aws:eks:eu-north-1:579225707106:cluster/mern-eks" -> (known after apply)
+      [33m~[0m[0m bootstrap_self_managed_addons = false [33m->[0m[0m true [31m# forces replacement[0m[0m
+      [33m~[0m[0m certificate_authority         = [
+          [31m-[0m[0m {
+              [31m-[0m[0m data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJUlNwdklESFlaL3d3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TmpBNE1ESXhOVE0wTXpGYUZ3MHpOakEzTXpBeE5UTTVNekZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUN3MnBUUHRYR1c3RHdFYUFiM0o3REZRbnBZUUdvaHU4ZWpxNWpmblBabnl6UC9vRFhjUWhsVmVBcmQKWVQ2c3V4MWpkWmNOdEhGVWtRd3V3OEdGVzZQdlhOOElSZEZpZjRDY2l2cHVndXZVa1k0b0dUTy9sUzBsR0I2UAp3TXVBQmtjK3B5aUQya1MyYW1aWit2S3FKWlNvanU4d1loRHV4cTJUampWV0d2V1p6enA2UjUxSDhSR0o3QmdTCmFSUVlwY3F3czRjMEs3d1A0NnVNQTE1OTdodWpKL3lCQkNvT3N2dU9MeFl5OGNFdjVpQVRGVkJFYzBQL1BMbDIKTERJMFJSc0RTR2dwQ1R0aG9hZkhVdmRYejNJbnJCSG1wSWpvbC9RQXR2OW00N2E4TjE1My91dTJadlZ6aUQwTgpIQXg4TW5nSmw0MVV6Tzh3aklpUmUzVzlUVzFmQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRak8zcUVBeVgrTkwrcnBhTGdKY2duYkdQQ2Z6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ01tdlRqNFQybApTN2d5Rms2dlBiYzEweU9yWm41clp1eWRwYlRvMDFDV3huN055K0E4UHUrL0MxcUsydmo1eTZvZFFJVVNiMDhaClFuMEdFMjFGSUpVNjd1dVBHSTB6dE93Y2JnUXV0WXRDU1RIYzJjdGoxclJWZHlRaU5rd2FsNEkzZVdORnQ4Uk8KTDk3V0haMFhvWEZ0bGxYbjd6OHo5Mm9SYzQybkhoT1JDWGZFZ1o1ZE1QQ1RaMDhlMnFNS1hqMGRDLzFRUEhoRgpWaG9ZejdzZkN1UHp4QUR0L0MyVVIwUVAzM0JwaDZOL3FlZnUxSi9HMUlTNXAwOElReEd2ME9BaEFZVkV6eTJyClNaWGszMjdpZDY2dU0rT0ZBT0JvSnY5NlhTSDlQQ2c1cWkxeW5uMm9rUWowV05ISXNtc1BHREJNTEV3U29jYisKWEtHL3hOWm12bDBqCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+            },
+        ] -> (known after apply)
+      [32m+[0m[0m cluster_id                    = (known after apply)
+      [33m~[0m[0m created_at                    = "2026-08-02T15:35:01Z" -> (known after apply)
+      [33m~[0m[0m endpoint                      = "https://54798A39A4A7467245254E41EDC18C5D.gr7.eu-north-1.eks.amazonaws.com" -> (known after apply)
+      [33m~[0m[0m id                            = "mern-eks" -> (known after apply)
+      [33m~[0m[0m identity                      = [
+          [31m-[0m[0m {
+              [31m-[0m[0m oidc = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m issuer = "https://oidc.eks.eu-north-1.amazonaws.com/id/54798A39A4A7467245254E41EDC18C5D"
+                    },
+                ]
+            },
+        ] -> (known after apply)
+        name                          = "mern-eks"
+      [33m~[0m[0m platform_version              = "eks.51" -> (known after apply)
+      [33m~[0m[0m role_arn                      = "arn:aws:iam::579225707106:role/mern-eks-cluster-20260802153429198100000003" [33m->[0m[0m "arn:aws:iam::579225707106:role/mern-eks-cluster-20260802182141937800000002" [31m# forces replacement[0m[0m
+      [33m~[0m[0m status                        = "ACTIVE" -> (known after apply)
+        tags                          = {
+            "terraform-aws-modules" = "eks"
+        }
+        [90m# (3 unchanged attributes hidden)[0m[0m
+
+      [33m~[0m[0m access_config {
+          [33m~[0m[0m bootstrap_cluster_creator_admin_permissions = true [33m->[0m[0m false
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [33m~[0m[0m encryption_config {
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [33m~[0m[0m provider {
+              [33m~[0m[0m key_arn = "arn:aws:kms:eu-north-1:579225707106:key/2edc5495-1ccf-415d-a82f-32d7c83fdfe4" [33m->[0m[0m "arn:aws:kms:eu-north-1:579225707106:key/0c78aead-dabf-4442-87fe-4a19cba514ac"
+            }
+        }
+
+      [33m~[0m[0m kubernetes_network_config {
+          [33m~[0m[0m service_ipv4_cidr = "10.100.0.0/16" -> (known after apply)
+          [32m+[0m[0m service_ipv6_cidr = (known after apply)
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [33m~[0m[0m elastic_load_balancing (known after apply)
+          [31m-[0m[0m elastic_load_balancing {
+              [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            }
+        }
+
+      [32m+[0m[0m timeouts {}
+
+      [33m~[0m[0m upgrade_policy (known after apply)
+      [31m-[0m[0m upgrade_policy {
+          [31m-[0m[0m support_type = "EXTENDED" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m vpc_config {
+          [33m~[0m[0m cluster_security_group_id = "sg-002f306c0c08b80fb" -> (known after apply)
+          [33m~[0m[0m security_group_ids        = [
+              [31m-[0m[0m "sg-038a8a90fcede30bd",
+              [32m+[0m[0m "sg-030a10b9a689deb82",
+            ]
+          [33m~[0m[0m vpc_id                    = "vpc-088550075565d0d5b" -> (known after apply)
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.eks.aws_iam_openid_connect_provider.oidc_provider[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_openid_connect_provider" "oidc_provider" {
+      [32m+[0m[0m arn             = (known after apply)
+      [32m+[0m[0m client_id_list  = [
+          [32m+[0m[0m "sts.amazonaws.com",
+        ]
+      [32m+[0m[0m id              = (known after apply)
+      [32m+[0m[0m tags            = {
+          [32m+[0m[0m "Name" = "mern-eks-eks-irsa"
+        }
+      [32m+[0m[0m tags_all        = {
+          [32m+[0m[0m "Name" = "mern-eks-eks-irsa"
+        }
+      [32m+[0m[0m thumbprint_list = (known after apply)
+      [32m+[0m[0m url             = (known after apply)
+    }
+
+[1m  # module.eks.time_sleep.this[0][0m will be created
+[0m  [32m+[0m[0m resource "time_sleep" "this" {
+      [32m+[0m[0m create_duration = "30s"
+      [32m+[0m[0m id              = (known after apply)
+      [32m+[0m[0m triggers        = {
+          [32m+[0m[0m "cluster_certificate_authority_data" = (known after apply)
+          [32m+[0m[0m "cluster_endpoint"                   = (known after apply)
+          [32m+[0m[0m "cluster_name"                       = (known after apply)
+          [32m+[0m[0m "cluster_service_cidr"               = (known after apply)
+          [32m+[0m[0m "cluster_version"                    = "1.32"
+        }
+    }
+
+[1m  # module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0][0m must be [1m[31mreplaced[0m
+[0m[32m+[0m/[31m-[0m[0m resource "aws_eks_node_group" "this" {
+      [33m~[0m[0m ami_type               = "AL2023_x86_64_STANDARD" -> (known after apply)
+      [33m~[0m[0m arn                    = "arn:aws:eks:eu-north-1:579225707106:nodegroup/mern-eks/default-20260802162249271300000001/aacfe1a4-8071-4246-e7ab-8a4f6bbd2572" -> (known after apply)
+      [33m~[0m[0m capacity_type          = "ON_DEMAND" -> (known after apply)
+      [33m~[0m[0m cluster_name           = "mern-eks" -> (known after apply) [31m# forces replacement[0m[0m
+      [33m~[0m[0m disk_size              = 0 -> (known after apply)
+      [33m~[0m[0m id                     = "mern-eks:default-20260802162249271300000001" -> (known after apply)
+      [31m-[0m[0m labels                 = {} [90m-> null[0m[0m
+      [33m~[0m[0m node_group_name        = "default-20260802162249271300000001" -> (known after apply)
+      [33m~[0m[0m node_role_arn          = "arn:aws:iam::579225707106:role/default-eks-node-group-20260802153429198200000004" [33m->[0m[0m "arn:aws:iam::579225707106:role/default-eks-node-group-20260802182141941200000005" [31m# forces replacement[0m[0m
+      [33m~[0m[0m release_version        = "1.32.13-20260728" -> (known after apply)
+      [33m~[0m[0m resources              = [
+          [31m-[0m[0m {
+              [31m-[0m[0m autoscaling_groups              = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m name = "eks-default-20260802162249271300000001-aacfe1a4-8071-4246-e7ab-8a4f6bbd2572"
+                    },
+                ]
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] -> (known after apply)
+      [33m~[0m[0m status                 = "ACTIVE" -> (known after apply)
+        tags                   = {
+            "Name" = "default"
+        }
+        [90m# (5 unchanged attributes hidden)[0m[0m
+
+      [33m~[0m[0m launch_template {
+          [33m~[0m[0m id      = "lt-02ac07af23f6c9c5e" -> (known after apply) [31m# forces replacement[0m[0m
+          [33m~[0m[0m name    = "default-2026080215432118650000000e" -> (known after apply)
+          [33m~[0m[0m version = "1" -> (known after apply)
+        }
+
+      [33m~[0m[0m node_repair_config (known after apply)
+
+      [32m+[0m[0m timeouts {}
+
+      [33m~[0m[0m update_config {
+          [31m-[0m[0m max_unavailable            = 0 [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+
+[1m  # module.eks.module.eks_managed_node_group["default"].aws_launch_template.this[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_launch_template" "this" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m default_version        = (known after apply)
+      [32m+[0m[0m description            = "Custom launch template for default EKS managed node group"
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m latest_version         = (known after apply)
+      [32m+[0m[0m name                   = (known after apply)
+      [32m+[0m[0m name_prefix            = "default-"
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m update_default_version = true
+      [32m+[0m[0m vpc_security_group_ids = [
+          [32m+[0m[0m "sg-09f8d59cb41bac53f",
+        ]
+        [90m# (2 unchanged attributes hidden)[0m[0m
+
+      [32m+[0m[0m metadata_options {
+          [32m+[0m[0m http_endpoint               = "enabled"
+          [32m+[0m[0m http_protocol_ipv6          = (known after apply)
+          [32m+[0m[0m http_put_response_hop_limit = 2
+          [32m+[0m[0m http_tokens                 = "required"
+          [32m+[0m[0m instance_metadata_tags      = (known after apply)
+        }
+
+      [32m+[0m[0m monitoring {
+          [32m+[0m[0m enabled = true
+        }
+
+      [32m+[0m[0m tag_specifications {
+          [32m+[0m[0m resource_type = "instance"
+          [32m+[0m[0m tags          = {
+              [32m+[0m[0m "Name" = "default"
+            }
+        }
+      [32m+[0m[0m tag_specifications {
+          [32m+[0m[0m resource_type = "network-interface"
+          [32m+[0m[0m tags          = {
+              [32m+[0m[0m "Name" = "default"
+            }
+        }
+      [32m+[0m[0m tag_specifications {
+          [32m+[0m[0m resource_type = "volume"
+          [32m+[0m[0m tags          = {
+              [32m+[0m[0m "Name" = "default"
+            }
+        }
+    }
+
+[1m  # module.eks.module.kms.aws_kms_alias.this["cluster"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "aws_kms_alias" "this" {
+        id             = "alias/eks/mern-eks"
+        name           = "alias/eks/mern-eks"
+      [33m~[0m[0m target_key_id  = "2edc5495-1ccf-415d-a82f-32d7c83fdfe4" [33m->[0m[0m "0c78aead-dabf-4442-87fe-4a19cba514ac"
+        [90m# (3 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.eks.module.eks_managed_node_group["default"].module.user_data.null_resource.validate_cluster_service_cidr[0m will be created
+[0m  [32m+[0m[0m resource "null_resource" "validate_cluster_service_cidr" {
+      [32m+[0m[0m id = (known after apply)
+    }
+
+[1mPlan:[0m [0m7 to add, 1 to change, 2 to destroy.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

@@ -18,4 +18,4 @@ spec:
         image: hitheshgowda10docker/admin:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 5173
+        - containerPort: 5174
