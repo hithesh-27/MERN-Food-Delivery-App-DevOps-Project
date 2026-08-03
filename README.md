@@ -1,54 +1,251 @@
-# Food-Delivery-App
+# 🍅 Tomato — MERN Food Delivery App (DevOps Project)
 
-## Local Run
+A production-ready **MERN Food Delivery Application** demonstrating a complete **DevOps CI/CD workflow**. The project consists of three independent services (Backend, Frontend, and Admin) integrated with a Jenkins CI pipeline that performs static code analysis, dependency scanning, container security scanning, and automatically publishes Docker images.
 
-This repository includes a backend API and a Vite-based React frontend.
+---
 
-### Run locally
+# 🚀 Tech Stack
 
-1. Start the backend:
-   - `cd backend`
-   - `npm install`
-   - `npm run server`
+## Application
+- React (Vite)
+- Node.js
+- Express.js
+- MongoDB Atlas
+- JWT Authentication
+- Stripe Payment Gateway
 
-2. Start the React frontend:
-   - `cd frontend`
-   - `npm install`
-   - `npm run dev`
+## DevOps
+- Jenkins
+- Docker
+- Docker Compose
+- SonarQube
+- OWASP Dependency-Check
+- Trivy
+- Kubernetes
+- Terraform
+- Git & GitHub
 
-3. Open the frontend app in your browser.
+---
 
-### Notes
+# 📂 Project Structure
 
-- The frontend uses `VITE_BACKEND_URL` at build time and defaults to `https://food-del-backend-2-tho7.onrender.com`.
-- For local development, set `VITE_BACKEND_URL=http://localhost:4000` before building or running the frontend.
+```text
+.
+├── admin/                     # React Admin Panel
+├── backend/                   # Express REST API
+├── frontend/                  # Customer React Application
+├── k8s/                       # Kubernetes manifests
+├── terraform/                 # Infrastructure as Code
+├── Jenkinsfile                # Jenkins CI Pipeline
+├── docker-compose.yml
+├── sonar-project.properties
+├── DEPLOYMENT_SUMMARY.md
+└── README.md
+```
 
-## Full Deployment
+---
 
-### Backend Deployment
+# 🏗️ Architecture
 
-1. Create GitHub repo: `FOOD-DEL-BACKEND`
-2. Push the backend code from `FOOD-DEL-BACKEND` folder
-3. Deploy to Render:
-   - Connect GitHub repo
-   - Build: `npm install`
-   - Start: `npm run server`
-   - Environment variables (see `.env.example`):
-     - `JWT_SECRET=demo_jwt_secret_food_del_2024`
-     - `STRIPE_SECRET_KEY=sk_test_YOUR_STRIPE_TEST_SECRET_KEY` (get from Stripe test dashboard)
-     - `MONGO_URI=mongodb+srv://hitheshgowdaar_db_user:yB7IbGmByVhakEis@cluster0.uxiwnnj.mongodb.net/food-del`
-4. Get the deployed URL (e.g. `https://food-del-backend.onrender.com`)
+```text
+                 GitHub Repository
+                        │
+                        ▼
+                  Jenkins Pipeline
+                        │
+     ┌──────────────────┼──────────────────┐
+     ▼                  ▼                  ▼
+ SonarQube      Dependency Check        Trivy
+  Analysis            Scan            Image Scan
+     └──────────────────┼──────────────────┘
+                        ▼
+               Docker Compose Build
+                        ▼
+             Docker Hub Image Push
+                        ▼
+              Kubernetes Deployment
+                        ▼
+                  MongoDB Atlas
+```
 
-### Frontend Deployment
+---
 
-1. Create a Render Static Site.
-2. Connect the GitHub repo `hithesh-27/Food-Delivery-App`.
-3. Set the root directory to `frontend`.
-4. Build command: `npm install && npm run build`
-5. Publish directory: `dist`
-6. Add environment variable:
-   - `VITE_BACKEND_URL=https://food-del-backend-2-tho7.onrender.com`
-7. Deploy.
+# ⚙️ Application Services
 
-Once your React frontend is live, set the backend `FRONTEND_URL` environment variable to the React frontend URL.
+| Service | Technology | Port |
+|---------|------------|------|
+| Backend | Node.js + Express | 4000 |
+| Frontend | React (Vite) | 5173 |
+| Admin | React (Vite) | 5174 |
+| Database | MongoDB Atlas | Cloud |
 
+---
+
+# 🔄 Jenkins CI Pipeline
+
+The Jenkins pipeline performs the following stages:
+
+1. Clean Workspace
+2. Checkout Source Code
+3. SonarQube Static Code Analysis
+4. OWASP Dependency-Check
+5. Docker Compose Build
+6. Trivy Image Security Scan
+7. Docker Hub Authentication
+8. Docker Image Push
+
+### Published Docker Images
+
+- `hitheshgowda10docker/tomato-backend:latest`
+- `hitheshgowda10docker/tomato-frontend:latest`
+- `hitheshgowda10docker/tomato-admin:latest`
+
+---
+
+# 🐳 Running with Docker
+
+Clone the repository:
+
+```bash
+git clone https://github.com/hithesh-27/MERN-Food-Delivery-App-DevOps-Project.git
+cd MERN-Food-Delivery-App-DevOps-Project
+```
+
+Build and start all services:
+
+```bash
+docker compose up --build
+```
+
+Application URLs:
+
+| Service | URL |
+|---------|-----|
+| Backend | http://localhost:4000 |
+| Frontend | http://localhost:5173 |
+| Admin | http://localhost:5174 |
+
+---
+
+# 💻 Running Without Docker
+
+## Backend
+
+```bash
+cd backend
+npm install
+npm run server
+```
+
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Admin
+
+```bash
+cd admin
+npm install
+npm run dev
+```
+
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file inside the **backend** directory.
+
+```env
+JWT_SECRET=<your_jwt_secret>
+
+MONGO_URI=<your_mongodb_connection_string>
+
+STRIPE_SECRET_KEY=<your_stripe_secret_key>
+
+FRONTEND_URL=http://localhost:5173
+```
+
+For both **frontend** and **admin**, configure:
+
+```env
+VITE_BACKEND_URL=http://localhost:4000
+```
+
+> **Never commit your `.env` file or real credentials to GitHub.**
+
+---
+
+# ☸️ Kubernetes Deployment
+
+Deploy the application using Kubernetes:
+
+```bash
+kubectl apply -f k8s/
+```
+
+---
+
+# 🌍 Terraform
+
+Infrastructure provisioning files are located in:
+
+```text
+terraform/
+```
+
+Refer to:
+
+```text
+DEPLOYMENT_SUMMARY.md
+```
+
+for infrastructure deployment instructions.
+
+---
+
+# 🔒 Security
+
+The CI pipeline includes automated security and quality checks using:
+
+- SonarQube
+- OWASP Dependency-Check
+- Trivy
+
+All sensitive information should be stored in environment variables or a `.env` file that is excluded from version control.
+
+---
+
+# ✨ Features
+
+- Full MERN Stack Food Delivery Application
+- JWT Authentication
+- Stripe Payment Integration
+- Dockerized Multi-Service Architecture
+- Jenkins CI Pipeline
+- SonarQube Static Code Analysis
+- OWASP Dependency Scanning
+- Trivy Container Security Scanning
+- Docker Hub Image Publishing
+- Kubernetes Deployment
+- Terraform Infrastructure Provisioning
+
+---
+
+# 📌 Future Improvements
+
+- GitHub Actions CI/CD Pipeline
+- Helm Charts
+- Argo CD GitOps Deployment
+- Prometheus & Grafana Monitoring
+- ELK Stack Logging
+- AWS EKS Deployment
+
+---
+
+# 📄 License
+
+This project is intended for educational purposes and DevOps learning. Feel free to fork, explore, and build upon it.
