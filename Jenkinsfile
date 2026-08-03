@@ -51,6 +51,15 @@ docker compose build
 '''
             }
         }
+        stage('Trivy Image Scan') {
+    steps {
+        sh '''
+        trivy image --exit-code 0 --severity LOW,MEDIUM,HIGH hitheshgowda10docker/tomato-backend:latest
+        trivy image --exit-code 0 --severity LOW,MEDIUM,HIGH hitheshgowda10docker/tomato-frontend:latest
+        trivy image --exit-code 0 --severity LOW,MEDIUM,HIGH hitheshgowda10docker/tomato-admin:latest
+        '''
+    }
+}
 
         stage('Docker Login') {
             steps {
