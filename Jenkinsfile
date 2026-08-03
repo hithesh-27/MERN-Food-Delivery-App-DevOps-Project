@@ -39,6 +39,13 @@ pipeline {
                 }
             }
         }
+        
+        stage('OWASP Dependency Check') {
+    steps {
+        dependencyCheck additionalArguments: '--scan .', odcInstallation: 'Dependency-Check'
+        dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+    }
+}
 
         stage('Build Docker Images') {
             steps {
